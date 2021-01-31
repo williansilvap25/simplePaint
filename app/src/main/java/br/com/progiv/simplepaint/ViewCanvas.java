@@ -27,13 +27,13 @@ public class ViewCanvas extends View {
     }
 
     public void inicializaObjetosVerde(){
-        path = new Path();
+        //path = new Path();
         Paint paint = Estilo.getEstiloParaLinhaVerde();
         linha = new Linha(getContext(), path, paint);
     }
 
     public void inicializaObjetosAmarelo(){
-        path = new Path();
+        //path = new Path();
         Paint paint = Estilo.getEstiloParaLinhaAmarela();
         linha = new Linha(getContext(), path, paint);
     }
@@ -108,6 +108,9 @@ public class ViewCanvas extends View {
                 tirouDedoTela();
                 invalidate();
             break;
+
+            default:
+                return false;
         }
         return true;
     }
